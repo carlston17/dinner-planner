@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ex.dinner_planner">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".homeGroup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".createGroup"
+            android:parentActivityName=".homeGroup" />
+        <activity
+            android:name=".myProfile"
+            android:parentActivityName=".homeGroup" />
+        <activity
+            android:name=".createEvent"
+            android:parentActivityName=".feed" />
+        <activity
+            android:name=".destination"
+            android:parentActivityName=".typePicker" />
+        <activity android:name=".feed"
+            android:parentActivityName=".homeGroup"/>
+        <activity android:name=".typePicker"
+            android:parentActivityName=".createEvent"/>
+        <activity android:name=".members"
+            android:parentActivityName=".feed"/>
+    </application>
+
+</manifest>
